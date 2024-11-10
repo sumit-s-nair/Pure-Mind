@@ -12,9 +12,9 @@ export async function POST(req: NextRequest) {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
     },
-    secure: false,  // Set this to false when using port 587
+    secure: false,
     tls: {
-      rejectUnauthorized: false  // Helps bypass issues with self-signed certificates
+      rejectUnauthorized: false
     }
   });
   
