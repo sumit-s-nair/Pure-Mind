@@ -2,6 +2,7 @@ import React from "react";
 import HomeHero from "./components/HomeHero";
 import ContactForm from "./components/ContactForm";
 import Navigation from "./components/Navigation";
+import Image from "next/image";
 
 const HomePage: React.FC = () => (
   <div className="w-full">
@@ -20,9 +21,11 @@ const HomePage: React.FC = () => (
     >
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="flex justify-center">
-          <img
+          <Image
             src="https://via.placeholder.com/400x300"
             alt="About Us Image"
+            width={400}
+            height={300}
             className="rounded-lg shadow-lg w-full h-auto object-cover"
           />
         </div>
@@ -138,10 +141,12 @@ const HomePage: React.FC = () => (
             key={index}
             className="bg-white shadow-lg rounded-lg p-6 text-center flex flex-col items-center animate__fadeIn animate__delay-6s"
           >
-            <img
+            <Image
               src={testimonial.image}
               alt={testimonial.name}
-              className="w-24 h-24 rounded-full mb-4"
+              width={96}
+              height={96}
+              className="rounded-full mb-4"
             />
             <p className="text-gray-700 italic mb-4">"{testimonial.quote}"</p>
             <h4 className="text-lg font-bold text-customBlue">

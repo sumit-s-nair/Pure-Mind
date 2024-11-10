@@ -1,6 +1,7 @@
 "use client";
 import { FC, useEffect } from "react";
 import Navigation from "../components/Navigation";
+import Image from "next/image";
 
 const AboutPage: FC = () => {
   useEffect(() => {
@@ -40,11 +41,12 @@ const AboutPage: FC = () => {
       <section className="py-24 bg-white text-center animate__animated animate__fadeIn animate__delay-2s">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center mb-12">
-            <img
+            <Image
               src="https://via.placeholder.com/150"
               alt="Dr. Shashank Wazarkar"
               className="rounded-full mb-6"
-              style={{ width: "180px", height: "180px" }}
+              width = {180}
+              height = {180}
             />
             <h2 className="text-4xl font-semibold text-customBlue">
               Dr. Shashank Wazarkar
