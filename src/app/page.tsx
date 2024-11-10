@@ -1,27 +1,12 @@
 import React from "react";
 import HomeHero from "./components/HomeHero";
 import ContactForm from "./components/ContactForm";
+import Navigation from "./components/Navigation";
 
 const HomePage: React.FC = () => (
   <div className="w-full">
     {/* Navigation Bar */}
-    <nav className="fixed top-0 w-full flex justify-between items-center p-6 bg-blue-900 text-white z-10 shadow-md animate-on-load">
-        <h1 className="text-2xl font-bold">Pure Mind</h1>
-        <div className="space-x-4 font-bold">
-          <a href="#home" className="hover:underline">
-            Home
-          </a>
-          <a href="#about" className="hover:underline">
-            About Us
-          </a>
-          <a href="#programs" className="hover:underline">
-            Programs
-          </a>
-          <a href="#contact" className="hover:underline">
-            Contact Us
-          </a>
-        </div>
-      </nav>
+    <Navigation />
 
     {/* Hero Section */}
     <div className="animate__animated animate__fadeIn animate__delay-1s">
