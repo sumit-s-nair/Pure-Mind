@@ -1,29 +1,40 @@
-import { FC } from 'react';
+"use client";
+import { FC, useEffect } from 'react';
 
 const AboutPage: FC = () => {
+  // Hook to trigger animations on page load
+  useEffect(() => {
+    const elements = document.querySelectorAll('.animate-on-load');
+    elements.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add('fade-in');
+      }, index * 300);
+    });
+  }, []);
+
   return (
     <div>
-    {/* Navigation Bar */}
-    <nav className="fixed top-0 w-full flex justify-between items-center p-6 bg-customBlue text-white z-10 shadow-md">
-      <h1 className="text-2xl font-bold">Pure Mind</h1>
-      <div className="space-x-4 font-bold">
-        <a href="#home" className="hover:underline">
-          Home
-        </a>
-        <a href="#about" className="hover:underline">
-          About Us
-        </a>
-        <a href="#programs" className="hover:underline">
-          Programs
-        </a>
-        <a href="#contact" className="hover:underline">
-          Contact Us
-        </a>
-      </div>
-    </nav>
+      {/* Navigation Bar */}
+      <nav className="fixed top-0 w-full flex justify-between items-center p-6 bg-blue-900 text-white z-10 shadow-md animate-on-load">
+        <h1 className="text-2xl font-bold">Pure Mind</h1>
+        <div className="space-x-4 font-bold">
+          <a href="#home" className="hover:underline">
+            Home
+          </a>
+          <a href="#about" className="hover:underline">
+            About Us
+          </a>
+          <a href="#programs" className="hover:underline">
+            Programs
+          </a>
+          <a href="#contact" className="hover:underline">
+            Contact Us
+          </a>
+        </div>
+      </nav>
 
       {/* Hero Section */}
-      <section className="relative bg-blue-600 text-white py-20 mt-20">
+      <section className="relative bg-blue-600 text-white py-20 mt-20 animate-on-load">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("https://via.placeholder.com/1500x500")' }}></div>
         <div className="relative container mx-auto text-center">
           <h1 className="text-5xl font-bold mb-6">Meet Dr. Shashank Wazarkar</h1>
@@ -34,7 +45,7 @@ const AboutPage: FC = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-24 bg-white text-center">
+      <section className="py-24 bg-white text-center animate-on-load">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center mb-12">
             <img

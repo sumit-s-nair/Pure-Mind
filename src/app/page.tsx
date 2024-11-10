@@ -5,29 +5,34 @@ import ContactForm from "./components/ContactForm";
 const HomePage: React.FC = () => (
   <div className="w-full">
     {/* Navigation Bar */}
-    <nav className="fixed top-0 w-full flex justify-between items-center p-6 bg-customBlue text-white z-10 shadow-md">
-      <h1 className="text-2xl font-bold">Pure Mind</h1>
-      <div className="space-x-4 font-bold">
-        <a href="#home" className="hover:underline">
-          Home
-        </a>
-        <a href="#about" className="hover:underline">
-          About Us
-        </a>
-        <a href="#programs" className="hover:underline">
-          Programs
-        </a>
-        <a href="#contact" className="hover:underline">
-          Contact Us
-        </a>
-      </div>
-    </nav>
+    <nav className="fixed top-0 w-full flex justify-between items-center p-6 bg-blue-900 text-white z-10 shadow-md animate-on-load">
+        <h1 className="text-2xl font-bold">Pure Mind</h1>
+        <div className="space-x-4 font-bold">
+          <a href="#home" className="hover:underline">
+            Home
+          </a>
+          <a href="#about" className="hover:underline">
+            About Us
+          </a>
+          <a href="#programs" className="hover:underline">
+            Programs
+          </a>
+          <a href="#contact" className="hover:underline">
+            Contact Us
+          </a>
+        </div>
+      </nav>
 
     {/* Hero Section */}
-    <HomeHero />
+    <div className="animate__animated animate__fadeIn animate__delay-1s">
+      <HomeHero />
+    </div>
 
     {/* About Us Section */}
-    <section id="about" className="py-16 bg-white">
+    <section
+      id="about"
+      className="py-16 bg-white animate__animated animate__fadeIn animate__delay-2s"
+    >
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="flex justify-center">
           <img
@@ -50,7 +55,10 @@ const HomePage: React.FC = () => (
     </section>
 
     {/* Programs Section */}
-    <section id="programs" className="py-16 bg-gray-50">
+    <section
+      id="programs"
+      className="py-16 bg-gray-50 animate__animated animate__fadeIn animate__delay-3s"
+    >
       <h3 className="text-3xl font-bold text-center text-customBlue mb-8">
         Programs We Offer
       </h3>
@@ -101,7 +109,7 @@ const HomePage: React.FC = () => (
           ].map((program) => (
             <div
               key={program.title}
-              className="bg-white shadow-md rounded-lg p-6 text-center w-80 flex-shrink-0"
+              className="bg-white shadow-md rounded-lg p-6 text-center w-80 flex-shrink-0 animate__fadeIn animate__delay-4s"
             >
               <div className="text-4xl mb-4">{program.icon}</div>
               <h4 className="text-2xl font-semibold mb-2 text-customBlue">
@@ -115,7 +123,10 @@ const HomePage: React.FC = () => (
     </section>
 
     {/* Testimonials Section */}
-    <section id="testimonials" className="py-16 bg-yellow-200 text-center">
+    <section
+      id="testimonials"
+      className="py-16 bg-yellow-200 text-center animate__animated animate__fadeIn animate__delay-4s"
+    >
       <h3 className="text-3xl font-bold text-customBlue mb-8">Testimonials</h3>
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {[
@@ -140,7 +151,7 @@ const HomePage: React.FC = () => (
         ].map((testimonial, index) => (
           <div
             key={index}
-            className="bg-white shadow-lg rounded-lg p-6 text-center flex flex-col items-center"
+            className="bg-white shadow-lg rounded-lg p-6 text-center flex flex-col items-center animate__fadeIn animate__delay-6s"
           >
             <img
               src={testimonial.image}
@@ -157,12 +168,12 @@ const HomePage: React.FC = () => (
     </section>
 
     {/* Contact Us Section */}
-    <section className="py-20 bg-gray-100">
-        <ContactForm />
-      </section>
+    <section className="py-20 bg-gray-100 animate__animated animate__fadeIn animate__delay-5s">
+      <ContactForm />
+    </section>
 
     {/* Footer */}
-    <footer className="text-center py-4 bg-gray-200">
+    <footer className="text-center py-4 bg-gray-200 animate__animated animate__fadeIn animate__delay-6s">
       <p className="text-gray-600">
         © {new Date().getFullYear()} Pure Mind Tutoring Center. All rights
         reserved.
